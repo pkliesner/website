@@ -1,0 +1,69 @@
+html {
+    /* Photo by Ilya Pavlov on unsplash.com */
+    background: url(splash.jpg) no-repeat center center fixed; 
+    background-size: cover;
+
+    font-family: "Calibri";
+    font-size: 16pt;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+body {
+    margin: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+div#sideNav {
+    margin-left: 8%;
+    width: 16%;
+    height: 100%;
+    background: rgba(52, 52, 52, 0.95);
+    box-shadow: 8px 8px 8px black;
+
+    float: left;
+}
+
+div#buttonWrapper{
+    margin-top: 100%;
+}
+div#navButton {
+    padding: 12px 24px 12px 0px;
+    border-bottom: 1px solid rgba(155, 155, 155, 0.75);
+    text-align: right;
+    font-size: 24pt;
+}
+div#navButton:hover {
+    background: rgba(191, 191, 191, 0.17);
+}
+
+div#contentWrapper {
+    margin-left: 24%;
+    height: 100%;
+    overflow: auto;
+}
+
+div#profileCard {
+    text-align: center;
+    width: 750px;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(52, 52, 52, 0.95);
+    box-shadow: 8px 8px 8px black;
+  
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+div#profilePic img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 4px 8px 8px black;
+}
