@@ -1,69 +1,190 @@
 html {
-    /* Photo by Ilya Pavlov on unsplash.com */
-    background: url(splash.jpg) no-repeat center center fixed; 
-    background-size: cover;
-
-    font-family: "Calibri";
+    font-family: Verdana, Arial;
     font-size: 16pt;
-    color: white;
-    text-shadow: 2px 2px 8px black;
+    color: #DFDFDF;
+    background-color: rgb(12, 12, 12);
 }
 
 body {
     margin: 0px;
+    overflow-x: hidden;
 }
 
 a {
-    color: white;
+    color: rgb(0, 151, 184);
     text-decoration: none;
 }
+a:hover {
+    text-decoration-line: underline;
+}
 
-div#sideNav {
-    margin-left: 8%;
-    width: 16%;
+
+div#main {
     height: 100%;
-    background: rgba(52, 52, 52, 0.95);
-    box-shadow: 8px 8px 8px black;
-
-    float: left;
+    width: 100%;
+    padding: 0;
 }
 
-div#buttonWrapper{
-    margin-top: 100%;
-}
-div#navButton {
-    padding: 12px 24px 12px 0px;
-    border-bottom: 1px solid rgba(155, 155, 155, 0.75);
-    text-align: right;
-    font-size: 24pt;
-}
-div#navButton:hover {
-    background: rgba(191, 191, 191, 0.17);
+div#card {
+    width: 650px;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*background-color: rgb(32, 32, 32);*/
+    border-radius: 15px;
+    padding: 24px;
+    box-shadow: 20px 20px 100px black;
 }
 
-div#contentWrapper {
-    margin-left: 24%;
-    height: 100%;
-    overflow: auto;
+div#cardPic {
+    width: 131px;
+    display: inline-block;
+    margin-right: 24px;
 }
-
-div#profileCard {
-    text-align: center;
-    width: 750px;
-    padding: 16px;
-    border-radius: 8px;
-    background: rgba(52, 52, 52, 0.95);
-    box-shadow: 8px 8px 8px black;
-  
-    margin-top: 24px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-div#profilePic img {
-    height: 250px;
-    width: 250px;
+div#cardPic img {
+    height: 125px;
+    width: 125px;
     border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 4px 8px 8px black;
+    box-shadow: 1px 1px 2px black;
+}
+
+div#cardTitle {
+    display: inline-block;
+    /*Vertically aligns title with picture*/
+    position: relative; 
+    top: 50%;
+    transform: translateY(-50%); 
+}
+div#cardTitle h4 {
+    color: rgb(89, 89, 89);
+}
+
+h1, h2, h4 {
+    margin: 0px;
+}
+
+div#cardHead {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid rgb(0, 151, 184);
+    text-shadow: 1px 1px 2px black;
+}
+
+div#cardAbout {
+    font-family: Palatino;
+    margin-bottom: 24px;
+}
+
+div#cardIcons {
+    width: auto;
+    height: 45px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14pt;
+}
+
+div#email, div#linkedin, div#github, div#twitter {
+    float: left;
+    width: 162px;
+}
+
+div#cardIcons img {
+    height: 40px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+div#email a, div#linkedin a, div#github a, div#twitter a {
+    text-decoration: none;
+    color: #DFDFDF;
+}
+div#email a:hover, div#linkedin a:hover, div#github a:hover, div#twitter a:hover{
+    text-decoration: none;
+    color: rgb(0, 151, 184);
+    text-shadow: 1px 1px 2px black;
+    transition: 0.3s;
+}
+
+
+
+/* The side navigation menu */
+div#navMenu img {
+    height: 44px;
+    width: 40px;
+    margin: 54px;
+    position: absolute;
+}
+div#navMenu img:hover {
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: -2;
+    background-color: rgb(12, 12, 12);
+    overflow-x: hidden;
+    padding-top: 100px; 
+    transition: 0.3s; 
+    box-shadow: 20px 0px 100px black;
+}
+
+.primaryNav{
+    font-size: 24px;
+}
+.secondaryNav {
+    position: absolute;
+    bottom: 20%;
+    font-size: 18px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 12px 8px 12px 32px;
+    text-decoration: none;
+    color: #DFDFDF;
+    display: block;
+    transition: 0.3s
+}
+div#home {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: rgb(0, 151, 184);
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+    padding-top: 15px;
+    padding-right: 20px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .3s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
